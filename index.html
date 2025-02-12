@@ -47,12 +47,24 @@
             </center>
     </div>
 
+    <div class="form-container">
+       <center>
+       <h2> Podes colaborar tambien al siguente CV</h2>
+        <br>
+    
+       <p id="cvu">0000003100050329746303</p>
+       <br>
+        <button onclick="copiarCVU()">Copiar CVU</button></center>
+      </div>
+
+
         <!--Formulario-->
 
         <div class="form-container">
            
             <center>
                 <h1>Formulario</h1>
+                <h3>Poner el mail en minusculas.</h3>
             </center>
             <br>
             <iframe
@@ -66,5 +78,17 @@
         </div>
 
     </div>
+
+
+    <script>
+        function copiarCVU() {
+          const textoACopiar = document.getElementById("cvu").innerText;
+          navigator.clipboard.writeText(textoACopiar).then(() => {
+            alert("CVU copiado: " + textoACopiar);
+          }).catch(err => {
+            console.error("Error al copiar el CVU:", err);
+          });
+        }
+      </script>
 
 </html>
